@@ -1,0 +1,28 @@
+def myfunction(n):
+#Loop 1
+    t = 0
+    for i in range(0, n+1):
+        print("First Loop")
+        t = t + 1
+    print('\n','\033[1m',"Loop 1: The number of iterations is {} - Linear, O(n).".format(t),"\033[0m")
+    ip=input("Input to continue: ")
+#Loop 2
+    #Reset value of t
+    t = 0
+
+    j = 1
+    while j <= n:
+        print("Second Loop", j)
+        j = j*2
+        t=t+1
+    print('\n','\033[1m',"Loop 1: The number of iterations is {} - O(log n).".format(t),"\033[0m")
+    ip2=input("Input to continue: ")
+#Loop 3
+    t = 0
+    for i in range(0, 100):
+        print("Third Loop")
+        t = t + 1
+    print('\n''\033[1m',"Loop 1: The number of iterations is {} - Constant, O(1).".format(t),"\033[0m")
+
+b = int(input("Enter a number:"))
+myfunction(b)
