@@ -1,0 +1,30 @@
+def reverse(n):
+
+    binary = ""
+
+    while n > 0:
+        binary = str(n % 2) + binary
+        n //= 2
+
+    a = int(binary) or 0
+
+    binary = int(binary)
+
+    rNum = 0
+
+    while binary > 0:
+        rNum = (rNum * 10) + (binary%10)
+        binary //= 10
+
+    decimal = 0
+
+    power = 1
+
+    while rNum > 0:
+        decimal += (rNum % 10) * power
+        rNum //= 10
+        power *= 2
+        
+    print(decimal)
+
+reverse(int(input("Enter a number: ")))
