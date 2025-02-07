@@ -1,0 +1,17 @@
+n = float(input("Enter a number: "))
+num = n
+
+if n < 1:
+    print("{} is not a natural number.".format(num))
+elif n == 1:
+    print("1 is a power of 8.")
+elif n % 1 != 0:
+    print("{} is not a natural number.".format(num))
+else:
+    while n >= 8:
+        n /= 8
+        
+    if n == 1:
+        print("{} is a power of 8.".format(num))
+    else:
+        print("{} is not a power of 8.".format(num))
