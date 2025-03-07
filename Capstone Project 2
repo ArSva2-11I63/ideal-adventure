@@ -1,0 +1,39 @@
+CREATE TABLE IF NOT EXISTS Table1(
+NAME TEXT,
+NEIGHBOURHOOD TEXT,
+CUISINE TEXT,
+REVIEW REAL,
+PRICE TEXT,
+HEALTH TEXT
+);
+
+INSERT INTO Table1(NAME, NEIGHBOURHOOD, CUISINE, REVIEW, PRICE, HEALTH) VALUES
+('Peter Candy', 'Brooklyn', 'Steak', 4.4, '$$$$', 'A'),
+
+('Jongro', 'Midtown', 'Korean', 3.5, '$$', 'A'),
+
+('Pocha', 'Midtown', 'Pizza', 4, '$$$', 'B'),
+
+('Lighthouse', 'Queens', 'Chinese', 3.9, '$', 'A'),
+
+('Minca', 'Downtown', 'American', 4.6, '$$$', 'A'),
+
+('Marea', 'Chinatown', 'Chinese', 3.0, '$$', 'B'),
+
+('Dirty Candy', 'Uptown', 'Italian', 4.9, '$$$$', 'A'),
+
+('Di Fara Pizza', 'Brooklyn', 'Pizza', 3.8, '$$$', 'B'),
+
+('Golden Unicorn', 'Uptown', 'Italian', 3.8, '$$', 'A');
+
+SELECT * FROM Table1;
+SELECT DISTINCT NEIGHBOURHOOD FROM Table1;
+SELECT DISTINCT CUISINE FROM Table1;
+SELECT * FROM Table1 WHERE CUISINE = 'Chinese';
+SELECT * FROM Table1 WHERE REVIEW >= 4;
+SELECT * FROM Table1 WHERE PRICE = '$$$' AND CUISINE = 'Italian';
+SELECT * FROM Table1 WHERE NAME LIKE '%Candy%';
+SELECT * FROM Table1 WHERE NEIGHBOURHOOD IN ('Midtown', 'Downtown', 'Chinatown');
+SELECT * FROM Table1 ORDER BY REVIEW LIMIT 4;
+SELECT * FROM Table1 WHERE NAME LIKE '%o%'
+SELECT DISTINCT REVIEW FROM Table1
