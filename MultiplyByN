@@ -1,0 +1,15 @@
+M = int(input("Enter a number: "))
+N = int(input("Enter the number N: "))
+
+def l1(a, b):
+    return a*b
+
+def lN(a, b):
+    pl = a
+    j = b - 1
+    for i in range(0, j):
+        a += pl
+    return a
+
+print("1 iteration: ",l1(M, N))
+print("N iterations: ",lN(M, N))
