@@ -1,0 +1,21 @@
+def myfunction1(n):
+    n = int(n)
+    if(n<0):
+        return
+    for i in range (0, n+1):
+        print("Hello")
+    if n > 0:
+        myfunction1(n/2)
+        myfunction1(n/3)
+
+a = int(input('Enter a number: '))
+myfunction1(a)
+
+def myfunction2(n):
+    if(n<=1):
+        return
+    print("Hello")
+    myfunction2(n-1) 
+
+b = int(input("Enter a number: "))
+myfunction2(b)
