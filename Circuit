@@ -1,0 +1,8 @@
+A = int(input("Enter number A: "))
+B = int(input("Enter number B: "))
+C = int(input("Enter number C: "))
+
+s1 = A & B
+s2 = (B | C) & (B & C)
+Q = s1 | s2
+print("The output of the circuit is: ", Q)
